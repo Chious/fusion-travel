@@ -1,6 +1,6 @@
 # Fusion Travel
 
-This is a solution from 104 Task.
+This is a solution for 銀河互動 Task from 104.
 
 ## Table of contents
 
@@ -23,7 +23,7 @@ This is a solution from 104 Task.
 ### Links
 
 - Solution URL: [https://github.com/Chious/fusion-travel](https://github.com/Chious/fusion-travel)
-- Live Site URL: [https://dazzling-conkies-026a37.netlify.app](https://dazzling-conkies-026a37.netlify.app)
+- Live Site URL: [https://fusion-travel.vercel.app](https://fusion-travel.vercel.app)
 
 ## My process
 
