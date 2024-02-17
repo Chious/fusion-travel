@@ -1,4 +1,4 @@
-import Footer from '@/components/footer';
+import Footer from '@/components/Footer';
 import HomeClient from '@/components/home/home-client';
 import HomeDestination from '@/components/home/home-destination';
 import HomeDiscount from '@/components/home/home-discount';
