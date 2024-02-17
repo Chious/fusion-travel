@@ -1,17 +1,33 @@
+import Link from 'next/link';
+import { FaPhone } from 'react-icons/fa6';
+
 export default function Navbar() {
   return (
-    <nav className="flex items-center justify-between h-20 w-screen fixed pr-40 pl-40 border-b border-solid bg-gray border-black/40 ">
-      <div className="btn-group flex gap-5 text-white">
-        <button>Home</button>
-        <button>Services</button>
-        <button>About Us</button>
-        <button>Our Clients</button>
-        <button>Blog</button>
-        <button>Contact Us</button>
-      </div>
-      <div className="contact">
-        <p>+ 516 260 0598</p>
-      </div>
-    </nav>
+    <>
+      <nav className='fixed z-50 flex h-20 w-screen items-center justify-between bg-gray pl-40 pr-40'>
+        <div className='btn-group flex gap-5 text-white'>
+          <Link href='/' className=' hover:text-yellow'>
+            Home
+          </Link>
+          <button className=' hover:text-yellow'>Services</button>
+          <Link href='/#AboutUs' className=' hover:text-yellow'>
+            About Us
+          </Link>
+          <Link href='/#HomeClient' className=' hover:text-yellow'>
+            Our Clients
+          </Link>
+          <Link href='/blog' className=' hover:text-yellow'>
+            Blog
+          </Link>
+          <Link href='/contact' className=' hover:text-yellow'>
+            Contact Us
+          </Link>
+        </div>
+
+        <p className='flex gap-1 text-white'>
+          <FaPhone /> + 516 260 0598
+        </p>
+      </nav>
+    </>
   );
 }

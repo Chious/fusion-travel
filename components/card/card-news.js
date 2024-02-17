@@ -1,23 +1,24 @@
-import classNames from "classnames";
+import classNames from 'classnames';
+import Link from 'next/link';
 
-export default function NewsCardItem({ direction }) {
+export default function NewsCardItem({ data }) {
+  const { slug, direction, title, description } = data;
   const displayStyle = `flex-${direction}`;
 
   return (
-    <div
-      className={classNames(
-        "bg-white w-full flex items-center justify-center p-4 gap-4",
-        displayStyle
-      )}
-    >
-      <div>
-        <h3>Most Beautiful Place In The World - Isunbui</h3>
-        <p>
-          Venture capital food-trunk minimum viable product ideate pitch deck
-          experiential cortado affordances parallax
-        </p>
+    <Link href={`/blog/${slug}`}>
+      <div
+        className={classNames(
+          'flex h-full w-full items-center justify-center gap-4 bg-white shadow-lg',
+          displayStyle
+        )}
+      >
+        <div className='flex h-fit flex-col gap-2 p-4'>
+          <h3>{title}</h3>
+          <p className=' leading-4'>{description}</p>
+        </div>
+        <div className='img h-28 w-full bg-gray' />
       </div>
-      <div className="image bg-gray" />
-    </div>
+    </Link>
   );
 }

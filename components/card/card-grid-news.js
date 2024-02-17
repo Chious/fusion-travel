@@ -1,20 +1,19 @@
-import NewsCardItem from "./card-news";
+import NewsCardItem from './card-news';
+import { newsData } from '@/data/news';
 
 export default function NewsCardGrid() {
+  const items = newsData.map((data) => {
+    return <NewsCardItem key={data.slug} data={data} />;
+  });
+
   return (
-    <div className=" w-full h-96 gap-5 grid grid-rows-3 grid-cols-4">
-      <div className="bg-gray grid-cols-subgrid grid-rows-subgrid row-span-2 col-span-2" />
-      <div className="bg-gray grid-rows-subgrid  row-span-2">
-        <NewsCardItem direction="col" />
-      </div>
-      <div className="bg-gray" />
-      <div className="bg-gray grid-rows-subgrid row-span-2">
-        <NewsCardItem direction="col" />
-      </div>
-      <div className="bg-gray grid-cols-subgrid col-span-2">
-        <NewsCardItem direction="row" />
-      </div>
-      <div className="bg-gray" />
+    <div className=' grid h-96 w-full grid-cols-4 grid-rows-3 gap-5'>
+      <div className='col-span-2 row-span-2 grid-cols-subgrid grid-rows-subgrid bg-gray' />
+      <div className=' row-span-2  grid-rows-subgrid'>{items[0]}</div>
+      <div className='bg-gray' />
+      <div className=' row-span-2 grid-rows-subgrid'>{items[1]}</div>
+      <div className=' col-span-2 grid-cols-subgrid'>{items[2]}</div>
+      <div className='bg-gray' />
     </div>
   );
 }

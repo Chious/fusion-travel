@@ -1,6 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Fusion Travel
 
-## Getting Started
+This is a solution from 104 Task.
+
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [QAs](#qas)
+  - [Useful Resources](#useful-resources)
+- [Author](#author)
+
+## Overview
+
+### Screenshot
+
+![](./screenshot.png)
+
+### Links
+
+- Solution URL: [https://github.com/Chious/fusion-travel](https://github.com/Chious/fusion-travel)
+- Live Site URL: [https://dazzling-conkies-026a37.netlify.app](https://dazzling-conkies-026a37.netlify.app)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- Tailwind CSS
+- className, prettier-plugin-tailwindcss - Deals with Tailwind CSS styles
+- NextJS - An JS framework based on ReactJS
+- react-icons - for import icons
+
+### QAs
+
+##### 1. How to Getting Started
 
 First, run the development server:
 
@@ -14,23 +51,53 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### 2. How this projet folder name meaning?
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. `./app`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Router related setting would save in `./app`, for example:
 
-## Learn More
+```
+├── community
+│   ├── page.js
+│   └── page.module.css
+├── globals.css
+├── icon.png
+├── layout.js
+├── meals
+│   ├── [mealSlug]
+│   │   ├── page.js
+│   │   └── page.module.css
+│   ├── error.js
+│   ├── loading-out.js
+│   ├── loading.module.css
+│   ├── page.js
+│   ├── page.module.css
+│   └── share
+│       ├── page.js
+│       └── page.module.css
+├── not-found.js
+├── page.js
+└── page.module.css
+```
 
-To learn more about Next.js, take a look at the following resources:
+`page.js`: Create it under the folder, it would automatically turn to page.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`layout.js`: Container of page.js, you can setup metadata or some global component(navbar for exaple). If child page don't have their own layout.js, it would apply to their parent's.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+`error.js`: If something goes wrong, it would show up error page.
 
-## Deploy on Vercel
+[mealSlug]: It's a dynamic page, you can get value by params in NextJS.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. `components`:Store React Components.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. `data`: Store Dummy Data.
+
+### Useful Resources:
+
+1. [How to setup Tailwind Prettier](https://medium.com/@cameronadams1225/setting-up-a-next-js-13-project-with-eslint-and-prettier-735c3ccfd26c)
+2. [How to build search and filter Coponent](https://dev.to/alais29/building-a-real-time-search-filter-in-react-a-step-by-step-guide-3lmm)
+
+## Author
+
+- Github - [Chious](https://github.com/Chious)

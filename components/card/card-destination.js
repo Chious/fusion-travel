@@ -1,7 +1,7 @@
-export default function DestinationCardItem() {
+export default function DestinationCardItem({ country }) {
   return (
-    <div className=" bg-gray">
-      <h3 className="w-full text-center pt-8 text-white">Thailand</h3>
+    <div className=' aspect-square w-full bg-gray'>
+      <h3 className='w-full pt-8 text-center text-white'>{country}</h3>
     </div>
   );
 }
