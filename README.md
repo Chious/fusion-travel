@@ -30,10 +30,10 @@ This is a solution for 銀河互動 Task from 104.
 ### Built with
 
 - Semantic HTML5 markup
-- Tailwind CSS
-- className, prettier-plugin-tailwindcss - Deals with Tailwind CSS styles
-- NextJS - An JS framework based on ReactJS
-- react-icons - for import icons
+- [Tailwind CSS](https://tailwindcss.com)
+- [classnames](https://www.npmjs.com/package/classnames), [prettier-plugin-tailwindcss](https://www.npmjs.com/package/prettier-plugin-tailwindcss) - Deals with Tailwind CSS styles
+- [NextJS](https://nextjs.org) - An JS framework based on ReactJS
+- [react-icons](https://www.npmjs.com/package/react-icons) - for import icons
 
 ### QAs
 
